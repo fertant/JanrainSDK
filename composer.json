@@ -1,5 +1,5 @@
 {
-	"name": "janrain/php-sdk",
+	"name": "janrainsdk/php-sdk",
 	"type": "library",
 	"license": "MIT",
 	"description": "Janrain's PHP SDK for enabling the Janrain Platform in your PHP project.",
