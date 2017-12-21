@@ -1,0 +1,37 @@
+{
+	"name": "janrain/php-sdk",
+	"type": "library",
+	"license": "MIT",
+	"description": "Janrain's PHP SDK for enabling the Janrain Platform in your PHP project.",
+	"keywords": ["janrain", "sdk", "php", "library"],
+	"version": "0.3.0",
+	"prefer-stable": true,
+	"prefer-dist": true,
+	"require": {
+		"php": ">5.3.0",
+		"psr/log": "*",
+		"peekmo/jsonpath": "1.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "src"
+		}
+	},
+	"require-dev": {
+		"php": ">5.3.0",
+		"psr/log": "*",
+		"peekmo/jsonpath": "1.*",
+		"phpspec/phpspec": "2.*",
+		"sami/sami": "*",
+		"psy/psysh": "*",
+		"guzzle/guzzle": "3.*",
+		"squizlabs/php_codesniffer": "dev-master"
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"#./vendor/bin/phpspec run",
+			"#./vendor/bin/phpcs --extensions=php --standard=PSR2 ./src",
+			"#./vendor/bin/sami.php update sami.php"
+		]
+	}
+}
